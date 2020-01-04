@@ -34,6 +34,8 @@ namespace AccountOwnerServer
             services.ConfigureIISIntegration();
             services.AddControllers();
             services.ConfigureLoggerService();
+            services.ConfigureMySqlContext(Configuration);
+            services.ConfigureRepositoryWrapper();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
